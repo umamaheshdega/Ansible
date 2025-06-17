@@ -15,12 +15,12 @@
     state: started
     enabled: yes
 
-- name: connect MySQL server
-  community.mysql.mysql.info: 
+      #- name: connect MySQL server
+      #  community.mysql.mysql.info: 
 
 
-  - name: print output of  MySQL server
-    ansible.builtin.debug:
-      msg: "MySQL info: {{ mysql_info }}
+      #  - name: print output of  MySQL server
+      #    ansible.builtin.debug:
+      #      msg: "MySQL info: {{ mysql_info }}
 
 
