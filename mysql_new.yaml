@@ -1,0 +1,26 @@
+---
+- name: install MySQL server
+  hosts: web
+  become: yes
+  
+  tasks:
+  - name: install MySQL server
+    ansible.builtin.package:
+    name: MySQL
+    state: present
+  
+  - name: start MySQL server
+    ansible.builtin.service:
+    name: MySQL
+    state: started
+    enabled: yes
+
+- name: connect MySQL server
+  community.mysql.mysql.info: 
+
+
+  - name: print output of  MySQL server
+    ansible.builtin.debug:
+      msg: "MySQL info: {{ mysql_info }}
+
+
